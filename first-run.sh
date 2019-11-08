@@ -12,6 +12,9 @@ echo "" &&
 sudo apt-get update &&
 sudo apt-get upgrade -y &&
 sudo apt-get install htop npm &&
+sudo npm cache clean -f &&
+sudo npm install -g n &&
+sudo n stable &&
 
 echo "" &&
 echo -e "${GREEN}----------------------------" &&
@@ -47,6 +50,7 @@ cd &&
 wget https://bitnami.com/redirect/to/770107/bitnami-lampstack-7.3.11-0-linux-x64-installer.run &&
 sudo chmod u+x bitnami-lampstack-7.3.11-0-linux-x64-installer.run &&
 sudo ./bitnami-lampstack-7.3.11-0-linux-x64-installer.run &&
+cat bitnami-lamp.sh | sudo tee /etc/init.d/bitnami &&
 
 echo "" &&
 echo -e "${GREEN}----------------------------" &&
