@@ -11,6 +11,7 @@ echo "" &&
 
 sudo apt-get update &&
 sudo apt-get upgrade -y &&
+sudo apt-get install htop &&
 
 echo "" &&
 echo -e "${GREEN}----------------------------" &&
@@ -40,6 +41,7 @@ echo "4.UPDATING BITNAMI" &&
 echo -e "----------------------------${NC}" &&
 echo "" &&
 
+sudo /opt/bitnami/ctlscript.sh stop &&
 sudo rm -rf /opt/bitnami &&
 cd &&
 wget https://bitnami.com/redirect/to/770107/bitnami-lampstack-7.3.11-0-linux-x64-installer.run &&
