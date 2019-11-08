@@ -11,7 +11,7 @@ echo "" &&
 
 sudo apt-get update &&
 sudo apt-get upgrade -y &&
-sudo apt-get install htop &&
+sudo apt-get install htop npm &&
 
 echo "" &&
 echo -e "${GREEN}----------------------------" &&
