@@ -40,21 +40,7 @@ echo fs.inotify.max_user_watches=250000 | sudo tee -a /etc/sysctl.conf && sudo s
 
 echo "" &&
 echo -e "${GREEN}----------------------------" &&
-echo "4.UPDATING BITNAMI" &&
-echo -e "----------------------------${NC}" &&
-echo "" &&
-
-sudo /opt/bitnami/ctlscript.sh stop &&
-sudo rm -rf /opt/bitnami &&
-cd &&
-wget https://bitnami.com/redirect/to/770107/bitnami-lampstack-7.3.11-0-linux-x64-installer.run &&
-sudo chmod u+x bitnami-lampstack-7.3.11-0-linux-x64-installer.run &&
-sudo ./bitnami-lampstack-7.3.11-0-linux-x64-installer.run &&
-cat bitnami-lamp.sh | sudo tee /etc/init.d/bitnami &&
-
-echo "" &&
-echo -e "${GREEN}----------------------------" &&
-echo "5.CLEANING" &&
+echo "4.CLEANING" &&
 echo -e "----------------------------${NC}" &&
 echo "" &&
 
